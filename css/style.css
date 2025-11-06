@@ -335,7 +335,18 @@ https://stackoverflow.com/questions/2941189/how-to-overlay-one-div-over-another-
     }
 
     #pokedex-nav {
-        top: 0px;
+        /* top: 0px; */
+        position: fixed;
+        top: 45px;
+        width: 100%;
+    }
+
+    #menu, .menu-buttons button {
+        width: 100%;
+    }
+
+    main {
+        margin-top: 40px;
     }
 
     /* Styling for Pokedex content in dialog box */
