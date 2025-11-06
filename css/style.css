@@ -1,0 +1,402 @@
+/* 
+Filename: styles.css
+Author: Mike Tam
+Contains styling for the main webpage (index.html)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+/* CSS Variables */
+:root {
+    --bgBlue: rgb(40, 55, 180);
+    --bgPokedexHover: rgba(40, 55, 180, 0.6);
+    --bgPokedexName: rgb(16, 16, 126);
+    --bgPokedex: white;
+    --bgYellow: #fff8b0;
+    --bgButton: green;
+    --bgOverlay: rgba(0, 128, 0, 0.7);
+    --bgCloseButton: rgba(128, 128, 128, 0.5);
+    --color-header: rgb(255, 222, 0);
+    --color-hover: white;
+    --color-pokedex-name: white;
+    --color-overlay: white;
+    --color-button: white;
+}
+
+/* CSS Grid for these elements */
+body, main, #pokedex-grid, #pokedex-content, #caught-list-content {
+    display: grid;
+}
+
+/* Flex for these elements */
+#pokedex-nav, .menu-buttons, #loadMoreSection, .dialog-buttons, .pokedex, #stats-container ul {
+    display: flex;
+}
+
+/* Flex column orientation for these elements */
+#loadMoreSection, .pokedex  {
+    flex-direction: column;
+}
+
+/* Flex row orientation for these elements */
+.dialog-buttons, #stats-container ul, #abilities-container ul {
+    flex-direction: row;
+}
+
+/* Flex wrap enabled for statistics listing */
+#stats-container ul {
+    flex-wrap: wrap;    
+}
+
+/* Primary styling for body - Grid set to 3 rows */
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Michroma", sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100vh;
+}
+
+/* Primary styling for header */
+header {
+    background-color: var(--bgBlue);
+    color: var(--color-header);
+    text-align: center;
+    grid-row: 1;
+}
+
+/* Styling for main heading of webpage */
+header h1 {
+    font-size: 3.0rem;
+    margin: 0px;
+    /* 
+    Source for adding shadow effect on text
+    https://www.w3schools.com/cssref/css3_pr_text-shadow.php
+     */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);    
+}
+
+/* Default styling for nav bar element */
+#pokedex-nav {
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-row: 2;
+    background-color: var(--bgYellow);
+    position: fixed;
+    top: 32px;
+    z-index: 3;
+}
+
+/* Styling for menu buttons in nav bar*/
+#menu, .menu-buttons button {
+    width: 200px;
+    height: 45px;
+    align-self: flex-start;
+    padding: 8px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: var(--color-header);
+}
+
+/* Hide navigation menu by default */
+.menu-buttons {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--bgYellow);
+    transition: opacity 0.3s ease-out;
+}
+
+#pokedex-nav:focus-within .menu-buttons {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+.menu-buttons button:focus, #menu:focus {
+    border: 5px solid white;
+}
+
+/* Styling for main section - overflow-y set to auto in order for the scrollbars to show when resizing page */
+main {
+    padding: 3% 0px 3% 0px;
+    background-color: var(--bgYellow);
+    overflow-y: auto;
+    grid-row: 3;
+}
+
+/* Pokedex content section - set to auto fill all columns and rows */
+#pokedex-grid, #caught-list-content {
+    grid-template-columns: repeat(auto-fill, 220px);
+    grid-template-rows: auto;
+    gap: 30px;
+    justify-content: center;
+}
+
+#caught-list-content {
+    padding: 10px;
+}
+
+/* Styling for the Load More button section */
+#loadMoreSection {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgYellow);
+}
+
+/* Styling for hover and focus on listed elements */
+#pokedex-grid:focus, 
+#loadMore:focus, 
+#dialogAction:focus,
+#dialogClose:focus,
+#caught-list-close:focus,
+#caught-list-release:focus,
+#about-close:focus,
+footer a:focus,
+
+#caught-list-release:hover,
+#caught-list-close:hover,
+#about-close:hover,
+#loadMore:hover, 
+#dialogAction:hover, 
+#dialogClose:hover,
+.pokedex:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.55);
+    transition: 0.3s;
+}
+
+.pokedex:hover {
+    background-color: var(--bgPokedexHover);
+    color: var(--color-hover);
+}
+
+/* Default styling for Load More, dialog action button, and caught list release button */
+#loadMore, #dialogAction, #caught-list-release {
+    width: 200px;
+    height: 50px;
+    color: var(--color-button);
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: var(--bgButton);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#caught-list-release {
+    background-color: red;
+}
+
+/* Assign footer to row 4 */
+footer {
+    grid-row: 4;
+}
+
+/* Styling for Pokedex card */
+.pokedex {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgPokedex);
+}
+
+/* Styling for Pokedex name on Pokedex card */
+.name {
+    text-align: center;
+    align-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style:oblique;
+    color: var(--color-pokedex-name);
+    height: 100%;
+    background-color: var(--bgPokedexName);
+}
+
+/* 
+Styling for the overlay
+Source on how to create an overlay on top of another element or a group of elements
+https://stackoverflow.com/questions/2941189/how-to-overlay-one-div-over-another-div
+ */
+.overlay {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: var(--bgOverlay);
+    color: var(--color-overlay);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1%;
+    font-style: oblique;
+    text-align: center;
+    align-content: center;
+}
+
+.caught {
+    display: block;
+}
+
+/* Styling for dialog box related elements */
+.dialog-buttons {
+    justify-content: space-between;
+}
+
+#dialogClose, #about-close, #caught-list-close {
+    font-size: 2.3rem;
+    width: 60px;
+    border-radius: 10%;
+    background-color: var(--bgCloseButton);
+}
+
+#dialog {
+    border: 10px solid black;
+}
+
+#about-close {
+    display: block;
+    justify-self: flex-end;
+}
+
+/* Styling for Pokedex content in dialog box */
+#pokedex-content {
+    padding: 10px;
+    margin: 10px;
+
+    grid-template-areas: 
+    "h1 h1"
+    "p1 p3"
+    "p1 p4"
+    "p1 p5"
+    "p2 p2"
+    ;
+}
+
+#pokedexName {
+    font-size: 2.0rem;
+    text-align: center;
+    align-content: center;
+    grid-area: h1;
+}
+
+#pokedexImage {
+    grid-area: p1;
+}
+
+#stats-container {
+    grid-area: p2;
+    width: 40vw;
+} 
+
+#stats-container ul li {
+    margin: 0px 1rem;
+}
+
+#abilities-container, #moves-container, #types-container {
+     width: 10vw;
+}
+
+#abilities-container {
+    grid-area: p3;
+}
+
+#moves-container {
+    grid-area: p4;
+}
+
+#types-container {
+    grid-area: p5;
+}
+
+#stats-container h3, #abilities-container h3, #moves-container h3, #types-container h3 {
+    font-size: 1.5rem;
+}
+
+.stat, .abilities, .moves, .types {
+    font-size: 1.0rem;
+}
+
+/* Media queries for tablet devices - between 768 px to 1028 px */
+@media screen and (min-width: 768px) and (max-width: 1028px) {
+    /* Styling for main heading of webpage */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #pokedex-nav {
+        top: 0px;
+    }
+
+    /* Styling for Pokedex content in dialog box */
+    #pokedex-content {
+        grid-template-areas: 
+        "h1 h1"
+        "p1 p1"
+        "p2 p2"
+        "p3 p5"
+        "p4 p4"
+        ;
+    }
+
+    #moves-container {
+        width: 40vw;
+    }
+}
+
+/* Media queries for mobile devices - between 320 px (ideal for google chrome mobile app) to 767 px */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+     /* Styling for main heading of webpage */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #pokedex-nav {
+        position: fixed;
+        top: 45px;
+        width: 100%;
+    }
+
+    #menu, .menu-buttons button {
+        width: 100%;
+    }
+
+    main {
+        margin-top: 40px;
+    }
+
+    /* Styling for Pokedex content in dialog box */
+    #pokedex-content {
+       grid-template-areas: 
+        "h1 h1"
+        "p1 p1"
+        "p2 p2"
+        "p3 p5"
+        "p4 p4"
+        ;
+    }
+
+    #pokedexImage {
+        width: 80vw;
+    }
+
+    #moves-container {
+        width: 40vw;
+    }
+
+    footer {
+        height: 100px;
+        background-color: var(--bgYellow);
+    }
+}
+

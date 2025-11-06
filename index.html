@@ -1,0 +1,68 @@
+<!-- 
+ Filename: index.html
+ Author: Mike Tam
+ Contains structural layout of the Pokedex project webpage
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Project Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Pokedex</h1>
+    </header>
+
+    <nav id="pokedex-nav">
+        <button id="menu">MENU</button>
+        <div class="menu-buttons">    
+            <button id="view-caught-list">CAUGHT LIST</button>
+            <button id="about">ABOUT</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="pokedex-grid"></section> 
+    </main>
+
+    <footer>
+        <section id="loadMoreSection">
+            <button id="loadMore">LOAD MORE</button>
+        </section>
+    </footer>
+
+    <dialog id="dialog" class="dialog">
+        <section class="dialog-buttons">
+            <button id="dialogAction">CATCH</button>
+            <button id="dialogClose">X</button>
+        </section>
+
+        <section id="dialogContent">
+
+        </section>
+    </dialog>
+
+    <dialog id="caught-list" class="caught-list">
+        <section class="dialog-buttons">
+            <button id="caught-list-release">RELEASE ALL</button>
+            <button id="caught-list-close">X</button>
+        </section>
+
+        <section id="caught-list-content">
+
+        </section>
+    </dialog>
+
+    <dialog id="about-dialog" class="about-dialog">
+        <button id="about-close">X</button>
+        
+        <section id="about-content">
+
+        </section>
+    </dialog>
+</body>
+</html>
