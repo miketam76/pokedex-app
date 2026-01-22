@@ -1,5 +1,5 @@
 # 📟 Pokedex Web Service
-A responsive, containerized web application built with vanilla HTML, CSS, and JavaScript. This project serves as a standalone module within my Forest-Themed Blog ecosystem, demonstrating how legacy-style web apps can be modernized using Docker and CI/CD automation.
+A responsive, containerized web application built with vanilla HTML, CSS, and JavaScript. This project demonstrates the use of CI/CD automation using GitHub Actions, Docker and Render web services.
 
 # 🚀 Live Demo
 https://pokedex-app-latest.onrender.com/
