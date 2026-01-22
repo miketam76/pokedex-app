@@ -34,10 +34,10 @@ Bash
 docker pull miketam76/pokedex:latest
 docker run -d -p 80:80 miketam76/pokedex
 # 🌟 Key Features
-Modular Design: Built to be easily consumed by my Angular-based forest blog.
+Vanilla JavaScript Logic: Core functionality built with standard ES6+ JavaScript, demonstrating a deep understanding of DOM manipulation and asynchronous API fetching without the "crutch" of a framework.
 
-Responsive UI: Fully functional across mobile and desktop views.
+Modern CSS Layouts: Uses Flexbox and Grid to ensure a fully responsive experience that scales from mobile devices to desktop monitors.
 
-Optimized Delivery: Served via a containerized environment for high availability.
+Containerized Consistency: Wrapped in a lightweight Docker image (Nginx), ensuring the application runs identically in development, testing, and production.
 
-Automated Workflow: Zero manual intervention required from code commit to live update.
+Production-Grade CI/CD: A fully automated pipeline that handles building, versioning, and cloud deployment, reducing manual overhead and human error.
