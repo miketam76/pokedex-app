@@ -22,7 +22,7 @@ Automated Build: On every push to the main branch, a GitHub Action triggers.
 
 Image Optimization: The workflow builds a production-ready Docker image, wrapping the HTML/JS assets into a lightweight web server.
 
-Registry Push: The image is versioned and pushed to Docker Hub (miketam76/pokedex).
+Registry Push: The image is versioned and pushed to Docker Hub (miketam76/pokedex-app).
 
 Instant Deployment: A deployment hook notifies Render, which pulls the fresh image and updates the live site.
 
@@ -31,8 +31,8 @@ To run the Pokedex locally without needing to manage files, use Docker:
 
 Bash
 
-docker pull miketam76/pokedex:latest
-docker run -d -p 80:80 miketam76/pokedex
+docker pull miketam76/pokedex-app:latest
+docker run -d -p 80:80 miketam76/pokedex-app
 # 🌟 Key Features
 Vanilla JavaScript Logic: Core functionality built with standard ES6+ JavaScript, demonstrating a deep understanding of DOM manipulation and asynchronous API fetching without the "crutch" of a framework.
 
