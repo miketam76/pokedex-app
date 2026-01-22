@@ -352,13 +352,13 @@ $about.addEventListener('click', (e) => {
                             <p>Version: 2.0</p>
                             <p>Powered by <a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
                             <p>Forked from Pokedex academic project developed by Mike Tam</p>
-                            <h3>Instructions</h3>
-                            <ol>
-                                <li>To view the full details of a Pokedex item, click on Pokedex item in the main listing.</li>
-                                <li>To catch a Pokedex item, click on Pokedex item in the main listing and click on the CATCH button.</li>
-                                <li>Access the CAUGHT LIST by clicking on MENU -> CAUGHT LIST</li>
-                                <li>To release a Pokedex item from the caught list, you can click on the caught Pokedex in either the main listing or the CAUGHT LIST. Then click on the RELEASE button</li>
-                            </ol>
+                            // <h3>Instructions</h3>
+                            // <ol>
+                            //     <li>To view the full details of a Pokedex item, click on Pokedex item in the main listing.</li>
+                            //     <li>To catch a Pokedex item, click on Pokedex item in the main listing and click on the CATCH button.</li>
+                            //     <li>Access the CAUGHT LIST by clicking on MENU -> CAUGHT LIST</li>
+                            //     <li>To release a Pokedex item from the caught list, you can click on the caught Pokedex in either the main listing or the CAUGHT LIST. Then click on the RELEASE button</li>
+                            // </ol>
                             `
     $dialogAbout.showModal()
 })
