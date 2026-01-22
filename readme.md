@@ -1,10 +1,10 @@
-📟 Pokedex Web Service
+# 📟 Pokedex Web Service
 A responsive, containerized web application built with vanilla HTML, CSS, and JavaScript. This project serves as a standalone module within my Forest-Themed Blog ecosystem, demonstrating how legacy-style web apps can be modernized using Docker and CI/CD automation.
 
-🚀 Live Demo
-[Insert your Render URL here]
+# 🚀 Live Demo
+https://pokedex-app-latest.onrender.com/
 
-🛠️ Technology Stack
+# 🛠️ Technology Stack
 Frontend: Vanilla HTML5, CSS3, JavaScript (ES6+)
 
 Containerization: Docker (Nginx-based)
@@ -15,7 +15,7 @@ CI/CD: GitHub Actions
 
 Hosting: Render (Web Service)
 
-🏗️ DevOps Architecture
+# 🏗️ DevOps Architecture
 I chose a Docker-first deployment strategy to ensure the application remains portable and consistent across environments:
 
 Automated Build: On every push to the main branch, a GitHub Action triggers.
@@ -26,14 +26,14 @@ Registry Push: The image is versioned and pushed to Docker Hub (miketam76/pokede
 
 Instant Deployment: A deployment hook notifies Render, which pulls the fresh image and updates the live site.
 
-📦 Local Usage
+# 📦 Local Usage
 To run the Pokedex locally without needing to manage files, use Docker:
 
 Bash
 
 docker pull miketam76/pokedex:latest
 docker run -d -p 80:80 miketam76/pokedex
-🌟 Key Features
+# 🌟 Key Features
 Modular Design: Built to be easily consumed by my Angular-based forest blog.
 
 Responsive UI: Fully functional across mobile and desktop views.
