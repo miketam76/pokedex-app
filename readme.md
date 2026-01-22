@@ -30,9 +30,10 @@ Instant Deployment: A deployment hook notifies Render, which pulls the fresh ima
 To run the Pokedex locally without needing to manage files, use Docker:
 
 Bash
-
+'''
 docker pull miketam76/pokedex-app:latest
 docker run -d -p 80:80 miketam76/pokedex-app
+'''
 # 🌟 Key Features
 Vanilla JavaScript Logic: Core functionality built with standard ES6+ JavaScript, demonstrating a deep understanding of DOM manipulation and asynchronous API fetching without the "crutch" of a framework.
 
