@@ -42,3 +42,10 @@ Modern CSS Layouts: Uses Flexbox and Grid to ensure a fully responsive experienc
 Containerized Consistency: Wrapped in a lightweight Docker image (Nginx), ensuring the application runs identically in development, testing, and production.
 
 Production-Grade CI/CD: A fully automated pipeline that handles building, versioning, and cloud deployment, reducing manual overhead and human error.
+
+🛠️ Technical Challenges & Solutions
+1. Git Identity & Credential Management
+Challenge: Managing a personal project (miketam76) on a machine configured for school work (tam0002) led to authentication conflicts and incorrect commit authorship. Solution: Implemented local Git configurations (git config --local) to isolate project identity. I also utilized Personal Access Tokens (PAT) with specific workflow scopes to bypass credential manager conflicts, ensuring a seamless and secure CI/CD push.
+
+2. Containerized Web Serving
+Challenge: Transitioning a vanilla HTML/JS app from a local file structure to a cloud-hosted container required proper port mapping and web server configuration. Solution: Configured an Nginx-based Dockerfile to serve static assets efficiently and mapped the internal container ports to match Render’s dynamic environment, resulting in a zero-downtime deployment.
